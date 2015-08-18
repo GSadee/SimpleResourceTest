@@ -1,0 +1,12 @@
+AppBundle\Entity\Car:
+    type: entity
+    table: car
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        make:
+            type: string
+        model:
+            type: string

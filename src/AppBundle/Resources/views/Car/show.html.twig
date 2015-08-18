@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    Cars
+{% endblock %}
+
+{% block container %}
+    <h1>Cars</h1>
+    <br />
+
+    <table id="cars" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Make</th>
+                <th>Model</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ car.make }}</td>
+                <td>{{ car.model }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

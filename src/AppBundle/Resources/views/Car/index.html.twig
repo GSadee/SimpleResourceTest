@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    Cars
+{% endblock %}
+
+{% block container %}
+    <h1>Cars</h1>
+    <br />
+
+    <table id="cars" class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Make</th>
+                <th>Model</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+                <tr>
+                    <td scope="row"><strong>{{ loop.index }}</strong></td>
+                    <td>{{ car.make }}</td>
+                    <td>{{ car.model }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

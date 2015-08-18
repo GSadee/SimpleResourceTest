@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    Cars
+{% endblock %}
+
+{% block container %}
+    <h1>Cars</h1>
+    <br />
+
+    {{ form_start(form, {'action': path('app_car_update', { 'id': car.id }) }) }}
+        <input type="hidden" name="_method" value="PUT" />
+        {{ form_errors(form) }}
+        <div class="form-group">
+            {{ form_row(form.make, { 'attr': { 'placeholder' : 'Input make', 'class' : 'form-control' } }) }}
+            {{ form_row(form.model, { 'attr': { 'placeholder' : 'Input model', 'class' : 'form-control' } }) }}
+        </div>
+        <button type="submit" class="btn btn-success btn-lg">Create</button>
+    {{ form_end(form) }}
+
+{% endblock %}
+§
