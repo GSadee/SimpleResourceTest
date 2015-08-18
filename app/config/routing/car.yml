@@ -1,0 +1,29 @@
+app_car_index:
+    path: /
+    methods: [GET]
+    defaults:
+        _controller: app.controller.car:indexAction
+
+app_car_create:
+    path: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: app.controller.car:createAction
+
+app_car_show:
+    path: /{id}
+    methods: [GET]
+    defaults:
+        _controller: app.controller.car:showAction
+
+app_car_update:
+    path: /{id}/edit
+    methods: [GET, PUT, PATCH]
+    defaults:
+        _controller: app.controller.car:updateAction
+
+app_car_delete:
+    path: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: app.controller.car:deleteAction

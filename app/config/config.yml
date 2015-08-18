@@ -81,7 +81,7 @@ swiftmailer:
 
 sylius_resource:
     resources:
-        app.book:
+        app.car:
             driver: doctrine/orm
             templates: AppBundle:Car
             classes:
