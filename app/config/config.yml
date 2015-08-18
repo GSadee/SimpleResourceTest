@@ -78,3 +78,11 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+sylius_resource:
+    resources:
+        app.book:
+            driver: doctrine/orm
+            templates: AppBundle:Car
+            classes:
+                model: AppBundle\Entity\Car
